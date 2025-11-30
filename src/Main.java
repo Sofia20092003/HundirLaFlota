@@ -11,7 +11,7 @@ public class Main {
         int numBarcos= tamanosBarcos.length;
 
         int[][] tableroBarcosJugador=Tablero.crearTableroBarcos(FILAS, COLUMNAS);
-        int[][] tableroBarcosCPU=Tablreo.crearTableroBarcos(FILAS,COLUMNAS);
+        int[][] tableroBarcosCPU=Tablero.crearTableroBarcos(FILAS,COLUMNAS);
 
         char[][] tableroDisparosJugador= Tablero.crearTableroDisparos(FILAS,COLUMNAS);
         char[][] tableroDisparosCPU=Tablero.crearTableroDisparos(FILAS,COLUMNAS);
