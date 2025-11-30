@@ -24,6 +24,40 @@ public class Barcos {
             if(columna+tamano>columnas){
                 return false;
             }
+            for (int c=columna; c<columnas; c++){
+                if(tablero[fila][c] !=-1){
+                    return false;
+                }
+            }
+        }else {
+            if(fila+tamano>filas){
+                return false;
+            }
+            for (int f=fila; f<fila + tamano; f++) {
+                if(tablero[f][columna]!=-1){
+                    return false;
+                }
+            }
         }
+        return true;
+    }
+    public static void colocarBarco(int[][] tablero, int fila, int columna, int tamano, boolean horizontal, int idBarco){
+        if (horizontal){
+            for (int c=columna;c< columna+tamano; c++){
+                tablero[fila][c]=idBarco;
+            }
+        }else {
+            for (int f=fila; f<fila + tamano; f++) {
+                tablero[f][columna]=idBarco;
+            }
+        }
+    }
+    public static boolean todosHundidos(int[] impactos, int[] tamanosBarcos){
+        for (int i=0; i<impactos.length; i++){
+            if (impactos[i]<tamanosBarcos[i]){
+                return false;
+            }
+        }
+        return true;
     }
 }
