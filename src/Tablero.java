@@ -19,37 +19,37 @@ public class Tablero {
         return tablero;
     }
     public static void mostrarTableroDisparos(char[][] t){
-        System.out.println("   ");
+        System.out.print("   ");
         for (int c=0;c<t[0].length;c++){
-            System.out.println(c+" ");
+            System.out.print(c+" ");
         }
         System.out.println();
         for(int f=0;f<t.length;f++){
-            System.out.println((char) ('A' +f) +" ");
+            System.out.print((char) ('A' +f) +" ");
             for(int c=0;c<t[0].length;c++){
-                System.out.println(t[f][c]+" ");
+                System.out.print(t[f][c]+" ");
             }
             System.out.println();
         }
     }
     public static void mostarTableroconBarcos(int[][] barcos, char[][] disparos){
-        System.out.println("  ");
+        System.out.print("  ");
         for (int c=0;c<barcos[0].length;c++){
-            System.out.println(c+"  ");
+            System.out.print(c+"  ");
         }
         System.out.println();
 
         for(int f=0;f<barcos.length;f++){
-            System.out.println((char) ('A' +f) +" ");
+            System.out.print((char) ('A' +f) +" ");
             for(int c=0;c<barcos[0].length;c++){
                 if(disparos[f][c]=='~'){
                     if(barcos[f][c]==-1){
-                        System.out.println(".  ");
+                        System.out.print(".  ");
                     }else {
-                        System.out.println(barcos[f][c]+" ");
+                        System.out.print(barcos[f][c]+" ");
                     }
                 }else {
-                    System.out.println(disparos[f][c]+" ");
+                    System.out.print(disparos[f][c]+" ");
                 }
             }
             System.out.println();
