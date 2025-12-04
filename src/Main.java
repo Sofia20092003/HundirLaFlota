@@ -23,6 +23,26 @@ public class Main {
             impactosJugador[i]=0;
             impactosCPU[i]=0;
         }
-        
+
+        System.out.println("Alistando los barcos del jugador......");
+        Barcos.colocarBarcosAleatorios(tableroBarcosJugador,tamanosBarcos);
+
+        System.out.println("Alistando los barcos del CPU......");
+        Barcos.colocarBarcosAleatorios(tableroBarcosCPU,tamanosBarcos);
+
+        boolean end=false;
+        boolean turnoJugador=true;
+
+        while(!end){
+            System.out.println("---------NUEVO TURNO----------");
+            if (turnoJugador){
+                System.out.println("Turno del jugador....");
+                System.out.println("\nTus Barcos: ");
+                Tablero.mostarTableroconBarcos(tableroBarcosJugador, tableroDisparosCPU);
+
+                System.out.println("\nTus disparos contra la CPU: ");
+                Tablero.mostrarTableroDisparos(tableroDisparosJugador);
+            }
+        }
     }
 }
