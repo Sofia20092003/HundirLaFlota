@@ -18,4 +18,19 @@ public class Utilidades {
             return -1;
         }
     }
+
+    public static int convertirColumna(String coord){
+        if(coord.isEmpty()){
+            return -1;
+        }
+        char letra=coord.charAt(0);
+        if(letra<'A' || letra>'Z'){
+            return -1;
+        }
+        return letra-'A';
+    }
+
+    public static String leerLinea(){
+        return SC.nextLine();
+    }
 }
