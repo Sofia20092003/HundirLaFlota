@@ -16,5 +16,13 @@ public class Main {
         char[][] tableroDisparosJugador= Tablero.crearTableroDisparos(FILAS,COLUMNAS);
         char[][] tableroDisparosCPU=Tablero.crearTableroDisparos(FILAS,COLUMNAS);
 
+        int[] impactosJugador= new int[numBarcos];
+        int[] impactosCPU= new int[numBarcos];
+
+        for (int i = 0; i < numBarcos; i++) {
+            impactosJugador[i]=0;
+            impactosCPU[i]=0;
+        }
+        
     }
 }
