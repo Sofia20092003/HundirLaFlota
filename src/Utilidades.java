@@ -8,26 +8,26 @@ public class Utilidades {
     }
 
     public static int convertirFila(String coord){
-        if(coord.length()<2){
+        if (coord.isEmpty()){
             return -1;
         }
-        String numero=coord.substring(1);
-        try{
+        char letra = coord.charAt(0);
+        if (letra < 'A' || letra > 'Z'){
+            return -1;
+        }
+        return letra-'A';
+    }
+
+    public static int convertirColumna(String coord){
+        if (coord.length()<2){
+            return -1;
+        }
+        String numero = coord.substring(1);
+        try {
             return Integer.parseInt(numero);
         }catch (Exception e){
             return -1;
         }
-    }
-
-    public static int convertirColumna(String coord){
-        if(coord.isEmpty()){
-            return -1;
-        }
-        char letra=coord.charAt(0);
-        if(letra<'A' || letra>'Z'){
-            return -1;
-        }
-        return letra-'A';
     }
 
     public static String leerLinea(){

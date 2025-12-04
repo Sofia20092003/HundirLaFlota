@@ -19,13 +19,13 @@ public class Tablero {
         return tablero;
     }
     public static void mostrarTableroDisparos(char[][] t){
-        System.out.print("   ");
+        System.out.print("  ");
         for (int c=0;c<t[0].length;c++){
             System.out.print(c+" ");
         }
         System.out.println();
         for(int f=0;f<t.length;f++){
-            System.out.print((char) ('A' +f) +" ");
+            System.out.print((char) ('A'+f) +" ");
             for(int c=0;c<t[0].length;c++){
                 System.out.print(t[f][c]+" ");
             }
@@ -35,16 +35,16 @@ public class Tablero {
     public static void mostarTableroconBarcos(int[][] barcos, char[][] disparos){
         System.out.print("  ");
         for (int c=0;c<barcos[0].length;c++){
-            System.out.print(c+"  ");
+            System.out.print(c+" ");
         }
         System.out.println();
 
         for(int f=0;f<barcos.length;f++){
-            System.out.print((char) ('A' +f) +" ");
+            System.out.print((char) ('A'+f) +" ");
             for(int c=0;c<barcos[0].length;c++){
                 if(disparos[f][c]=='~'){
                     if(barcos[f][c]==-1){
-                        System.out.print(".  ");
+                        System.out.print(". ");
                     }else {
                         System.out.print(barcos[f][c]+" ");
                     }
